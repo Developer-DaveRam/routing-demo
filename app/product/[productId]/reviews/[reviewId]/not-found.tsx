@@ -1,3 +1,14 @@
-export default function notFound(){
-    return <h1>Reviews Not found</h1>
+"use client";
+
+import { usePathname } from "next/navigation";
+
+export default function NotFound() {
+  const pathname = usePathname();
+  const productId = pathname.split("/")[2];
+  const reviewId = pathname.split("/")[4];
+  return (
+    <h1>
+      Page Not Found For Review {reviewId} And ProductId {productId}
+    </h1>
+  );
 }

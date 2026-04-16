@@ -1,10 +1,6 @@
 import { notFound } from "next/navigation";
 
-export default function Reviews({
-  params,
-}: {
-  params: { productId: string; reviewId: string };
-}) {
+export default function Reviews({params,}: {params: { productId: string; reviewId: string }}) {
   const { productId, reviewId } = params;
   const parsedReviewId = Number(reviewId);
 
